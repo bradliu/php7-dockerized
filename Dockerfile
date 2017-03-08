@@ -1,8 +1,6 @@
 FROM php:7-fpm
 MAINTAINER zhenkuo liu <liu@zhenkuo.com>
 
-COPY sources.list /etc/apt/sources.list
-
 RUN echo "Asia/Shanghai" > /etc/timezone
 RUN apt-get clean && apt-get update && apt-get install -y \
         libfreetype6-dev \
